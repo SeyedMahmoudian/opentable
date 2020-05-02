@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Forms from './Forms';
+import ResturantList from './ResturantList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component{
+ state={
+   restArray:[],
+   order:0,
+ };
+ addRest=(restInfo,order)=>{
+
+   this.setState(({
+      restArray:[restInfo],
+      order:order
+      
+   }));
+   
+ };
+
+  render(){
+    return(
+      <div>
+        <Forms onSubmit={this.addRest}/>
+        
+        <ResturantList restInfo={this.state.restArray} order={this.state.order}/>
+      </div>
+    );
+  }
 }
 
 export default App;
