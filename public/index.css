@@ -18,5 +18,9 @@ code {
 #root{
   margin-top: 40px;
 }
-@media (min-width:320px)  {#root{margin-top:0px;} }
-@media (min-width:481px)  { #root{margin-top:0px;}}
+@media (min-width:1025px) { #root{
+  margin-top: 40px;
+}}
+@media (min-width:1281px) {#root{
+  margin-top: 40px;
+}}
