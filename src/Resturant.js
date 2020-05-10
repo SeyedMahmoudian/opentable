@@ -19,9 +19,9 @@ class Resturant extends React.Component {
             
             <div className="resturant col-lg-8 col-md-8 col-xs-12 col-sm-12 ">
                 <h1 className="resturantText">List of places matching above criteria</h1>
-                <div className="resutrantInfo">
+                
                     {list.map(resturans => (
-                        <div className="row">  
+                        <div className="row resutrantInfo">  
                             <div className="col-lg-8 col-md-8 col-xs-12 col-sm-12">
                             <h3 className="name">{resturans.name}</h3>
                             <div className="address">{resturans.address}</div>
@@ -37,7 +37,7 @@ class Resturant extends React.Component {
                         </div>
                     ))}
 
-                </div>
+                
             </div>
             <div className="col-lg-2 col-md-2 hidden-xs hidden-sm"></div>
             </div>
