@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-// import axios from 'axios';
+
 
 class Forms extends React.Component {
     state = { dest: '' };
@@ -38,9 +38,9 @@ class Forms extends React.Component {
         const { error, isLoaded, cities } = this.state;
 
         if (error) {
-            return <div className="row"><div className="col-lg-4 col-md-4 col-xs-12 col-sm-12"><img src="./pics/loading.gif" alt="loading.." /></div></div>
+            return <div className="row"><div className="col-lg-2 col-md-2 hidden-xs hidden-sm"></div><div className="col-lg-4 col-md-4 col-xs-12 col-sm-12"><img src="./pics/loading.gif" alt="loading.." /></div></div>
         } else if (!isLoaded) {
-            return <div className="row"><div className="col-lg-4 col-md-4 col-xs-12 col-sm-12"><p>Error!</p></div></div>
+            return <div className="row"><div className="col-lg-2 col-md-2 hidden-xs hidden-sm"></div> <div className="col-lg-4 col-md-4 col-xs-12 col-sm-12"><p>Error!</p></div></div>
         } else {
             return (
                 <React.Fragment>

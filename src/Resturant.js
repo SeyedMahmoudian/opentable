@@ -4,10 +4,9 @@ class Resturant extends React.Component {
     render() {
         let list = this.props;
       
-        list = Object.values(list);//convert list to array fro mobject
+        list = Object.values(list);
         var order = list[0];
-        //console.log("list",list);
-        console.log("order",order);
+        
         if(order===1){
         list.sort((a,b)=>(a.price>b.price)?1:-1);
     }else{
@@ -22,7 +21,7 @@ class Resturant extends React.Component {
                 <h1 className="resturantText">List of places matching above criteria</h1>
                 <div className="resutrantInfo">
                     {list.map(resturans => (
-                        <div className="parent row">  
+                        <div className="row">  
                             <div className="col-lg-8 col-md-8 col-xs-12 col-sm-12">
                             <h3 className="name">{resturans.name}</h3>
                             <div className="address">{resturans.address}</div>
