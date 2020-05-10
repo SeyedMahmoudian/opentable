@@ -10,7 +10,7 @@ class Forms extends React.Component {
     }
     componentDidMount() {
 
-        fetch("http://opentable.herokuapp.com/api/cities").then(response => response.json()).then(
+        fetch("https://opentable.herokuapp.com/api/cities").then(response => response.json()).then(
             (result) => {
                 this.setState({
                     isLoaded: true,
@@ -27,7 +27,7 @@ class Forms extends React.Component {
     }
     handleSubmit = async (event) => {
         event.preventDefault();
-        const resp = await axios.get('http://opentable.herokuapp.com/api/restaurants?city=' + this.state.dest);
+        const resp = await axios.get('https://opentable.herokuapp.com/api/restaurants?city=' + this.state.dest);
 
         this.props.onSubmit(resp.data.restaurants, this.state.order);
         this.setState({ dest: '' });
