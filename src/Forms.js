@@ -49,14 +49,18 @@ class Forms extends React.Component {
                         <div className="col-lg-8 col-md-8 col-xs-12 col-sm-12">
                             <form onSubmit={this.handleSubmit}>
                                 <div className="row">
-                                    <div className="col-lg-6 col-md-6 col-hidden-12 col-xs-12">
-                                        <h3>Available list to choose from:</h3>
+                                    <div className="col-lg-4 col-md-4 col-hidden-12 col-xs-12">
+                                       <h3> <label for="cities">Available list to choose from:</label></h3>
                                     </div>
-                                    <div className="col-lg-6 col-md-6 col-xs-12 col-sm-12 form-group">
+                                    <div className="col-lg-8 col-md-8 col-xs-12 col-sm-12 form-group">
 
-                                        <select className="form-control" required value={this.state.dest} onChange={event => this.setState({ dest: event.target.value })}>
+                                        <select id="cities" className="form-control" required value={this.state.dest} onChange={event => this.setState({ dest: event.target.value })}>         
+                                          
+                                        <option disabled selected></option>
                                             {cities.cities.map(city => (
-                                                <option value={city}>
+                                               
+                                                    <option value={city}>
+                                                      
                                                     {city}
                                                 </option>
                                             ))
@@ -66,11 +70,12 @@ class Forms extends React.Component {
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <div className="col-lg-6 col-md-6 col-hidden-12 col-xs-12">
-                                        <h3>Arrange order</h3>
+                                    <div className="col-lg-4 col-md-4 col-hidden-12 col-xs-12">
+                                        <h3><label for="order">Display price in order of </label></h3>
                                     </div>
-                                    <div className="form-group col-md-6 col-lg-6 col-xs-12- col-sm-12">
-                                        <select className="form-control" required value={this.state.order} onChange={event => this.setState({ order: event.target.value })}>
+                                    <div className="form-group col-md-8 col-lg-8 col-xs-12- col-sm-12">
+                                        <select id="order"className="form-control" required value={this.state.order} onChange={event => this.setState({ order: event.target.value })}>
+                                            <option selected></option>
                                             <option value="1">Ascending</option>
                                             <option value="2">Descending</option>
                                         </select>
@@ -79,7 +84,8 @@ class Forms extends React.Component {
                                 <div className="row">
                                     <div className="col-lg-5 col-md-5 hidden-xs hidden-sm"></div>
                                     <div className="col-lg-4 col-md-4 col-xs-12 col-sm-12">
-                                        <button type="submit" className="btn btn-primary">Search</button>
+                                         <button name="reset" value="Reset field" type="reset" className = "btn btn-secondary">Reset</button>
+                                        <button name="submit" value="Submit search"type="submit" className="btn btn-primary">Search</button>
                                     </div>
                                 </div>
                             </form>

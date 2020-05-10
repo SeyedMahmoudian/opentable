@@ -5,6 +5,7 @@ class Resturant extends React.Component {
         let list = this.props;
       
         list = Object.values(list);
+        
         var order = list[0];
         
         if(order===1){
@@ -13,13 +14,14 @@ class Resturant extends React.Component {
         list.sort((a,b)=>(a.price<b.price)?1:-1);
     }
        list.pop();
+       if(list.length>0){
         return (
            
             <div className="row">
-                <div className="col-lg-2 col-md-2 hidden-xs hidden-sm"></div>
-                {console.log(list)}
+                <div className="col-lg-2 col-md-2 hidden-xs hidden-sm"></div>          
+            
             <div className="resturant col-lg-8 col-md-8 col-xs-12 col-sm-12 ">
-                <h1 className="resturantText">List of places matching above criteria</h1>
+                <h1 className="header">List of places matching above criteria</h1>
                
                     {list.map(resturans => (
                         <div className="row resutrantInfo">  
@@ -29,8 +31,8 @@ class Resturant extends React.Component {
                             <div className="city">{resturans.city}, {resturans.area} {resturans.postal_code}</div>
                             <div className="number">Number: {resturans.phone}</div>
                             <div className="price">Price: {resturans.price}</div>
-                            <a className="btn btn-success" href={resturans.reserve_url} target="_blank noopener noreferrer">Reserver now</a>
-                            <a className="btn btn-info" href={'https://www.google.com/maps/place/' + resturans.lat+','+resturans.lng} target="_blank noopener noreferrer">Google map</a>
+                            <a className="btn btn-success" title={"Make reservation for "+resturans.name} href={resturans.reserve_url} target="_blank noopener noreferrer">Reserver now</a>
+                            <a className="btn btn-info" title={"Display the"+resturans.name+"on google map"} href={'https://www.google.com/maps/place/' + resturans.lat+','+resturans.lng} target="_blank noopener noreferrer">Google map</a>
                             </div>
                             <div className="col-lg-4 col-md-4 col-xs-12 col-sm-12">
                             <img src={resturans.image_url} alt={resturans.name} />
@@ -44,6 +46,18 @@ class Resturant extends React.Component {
             </div>
 
         );
+    }else{
+        return(
+            <div className="row">
+            <div className="col-lg-2 col-md-2 hidden-xs hidden-sm"></div>
+            
+        
+            <div className="resturant col-lg-8 col-md-8 col-xs-12 col-sm-12 ">
+            <h1 className="header">No resturant is available for this city please try again</h1>
+            </div>
+            </div>
+        );
+    }
 
 
 
