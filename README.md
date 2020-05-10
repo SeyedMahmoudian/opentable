@@ -7,9 +7,9 @@ It took me 2 horus to finish the project. I would add more criteria to user inpu
 ### 2.	What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
 
 using axios was very useful feature to call the api and render different list for each city
-  event.preventDefault();
+        
+        event.preventDefault();
         const resp = await axios.get('https://opentable.herokuapp.com/api/restaurants?city=' + this.state.dest);
-
         this.props.onSubmit(resp.data.restaurants, this.state.order);
         this.setState({ dest: '' });
 
@@ -23,7 +23,7 @@ I would add more input for json api call so for example only display resturants 
 
 ### 5.	Please describe yourself using JSON.
 
-{
+    {
    
   "name": "Seyedamin Seyedmahmoudian",
   "preferred-name": "Amin",
@@ -36,4 +36,4 @@ I would add more input for json api call so for example only display resturants 
   "location":"Toronto",
   "experience":"one year front end developer at AirCanada"
 
-}
+    }
