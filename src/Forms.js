@@ -38,9 +38,9 @@ class Forms extends React.Component {
         const { error, isLoaded, cities } = this.state;
 
         if (!isLoaded) {
-            return <div className="row"><div className="d-flex justify-content-center"><img src="./pics/loading.gif" alt="loading.." /></div></div>
+            return <div className="d-flex flex-row"><div className="d-flex justify-content-center"><img src="./pics/loading.gif" alt="loading.." /></div></div>
         } else if (error) {
-            return <div className="row"><div className="d-flex justify-content-center"><p>Error!</p></div></div>
+            return <div className="d-flex flex-row"><div className="d-flex justify-content-center"><p>Error!</p></div></div>
         } else {
             return (
                 <React.Fragment>
