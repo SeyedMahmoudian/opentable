@@ -25,15 +25,15 @@ I would add more input for json api call so for example only display resturants 
 
     {
    
-  "name": "Seyedamin Seyedmahmoudian",
-  "preferred-name": "Amin",
-  "passions":[
-      "Programming",
-      "Problem solving",
-      "Tech"
-  ],
-  "age":"28",
-  "location":"Toronto",
-  "experience":"one year front end developer at AirCanada"
+        "name": "Seyedamin Seyedmahmoudian",
+        "preferred-name": "Amin",
+      "passions":[
+            "Programming",
+            "Problem solving",
+            "Tech"
+     ],
+        "age":"28",
+        "location":"Toronto",
+        "experience":"one year front end developer at AirCanada"
 
     }
