@@ -11,9 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.parent {
+.row.resutrantInfo {
   border: red;
   border-style: groove;
+
+}
+.resturant{
+  box-shadow: 9px -5px 20px 0px rgba(0, 0, 0, 0.21), 0 1px 14px 7px rgba(0, 0, 0, 0.26);
+}
 }
 #root{
   margin-top: 40px;
