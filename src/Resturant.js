@@ -3,7 +3,7 @@ import React from 'react';
 class Resturant extends React.Component {
     render() {
         let list = this.props;
-      
+        let i =0;
         list = Object.values(list);
         
         var order = list[0];
@@ -16,15 +16,15 @@ class Resturant extends React.Component {
        list.pop();
        if(list.length>0){
         return (
-           
+          
             <div className="row">
                 <div className="col-lg-2 col-md-2 hidden-xs hidden-sm"></div>          
             
             <div className="resturant col-lg-8 col-md-8 col-xs-12 col-sm-12 ">
                 <h1 className="header">List of places matching above criteria</h1>
-               
+                
                     {list.map(resturans => (
-                        <div className="row resutrantInfo">  
+                        <div className="row resutrantInfo" tabindex={i++}>  
                             <div className="col-lg-8 col-md-8 col-xs-12 col-sm-12">
                             <h3 className="name">{resturans.name}</h3>
                             <div className="address">{resturans.address}</div>
