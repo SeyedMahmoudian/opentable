@@ -8,10 +8,7 @@ class ResturantList extends React.Component {
       return (
 
           <div className="returantlist">
-          {this.props.restInfo.map((item, key) =>
-       <Resturant resturant={item} key={item.id}{...p.order} />
-       
-      )}  
+        
      {p.restInfo.map(resutrantInfo=><Resturant key={resutrantInfo.id}{...resutrantInfo}{...p.order}/>)}
          
           

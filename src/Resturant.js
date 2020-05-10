@@ -12,14 +12,15 @@ class Resturant extends React.Component {
     }else{
         list.sort((a,b)=>(a.price<b.price)?1:-1);
     }
-       
+       list.pop();
         return (
+           
             <div className="row">
                 <div className="col-lg-2 col-md-2 hidden-xs hidden-sm"></div>
-            
+                {console.log(list)}
             <div className="resturant col-lg-8 col-md-8 col-xs-12 col-sm-12 ">
                 <h1 className="resturantText">List of places matching above criteria</h1>
-                console.log(resturans.name);
+               
                     {list.map(resturans => (
                         <div className="row resutrantInfo">  
                             <div className="col-lg-8 col-md-8 col-xs-12 col-sm-12">
