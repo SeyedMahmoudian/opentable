@@ -1,6 +1,6 @@
 
 
-## 1. How long did you spend on the coding assignment? What would you add to your solution if you had more time? If you didn't spend much time on the coding test then use this as an opportunity to explain what you would add.
+### 1. How long did you spend on the coding assignment? What would you add to your solution if you had more time? If you didn't spend much time on the coding test then use this as an opportunity to explain what you would add.
 
 It took me 2 horus to finish the project. I would add more criteria to user input choice so they can refine the result more 
 
