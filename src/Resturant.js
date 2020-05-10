@@ -22,14 +22,15 @@ class Resturant extends React.Component {
             
             <div className="resturant col-lg-8 col-md-8 col-xs-12 col-sm-12 ">
                 <h1 className="header">List of places matching above criteria</h1>
-                
+                  
                     {list.map(resturans => (
+                        
                         <div className="row resutrantInfo" tabindex={i++}>  
                             <div className="col-lg-8 col-md-8 col-xs-12 col-sm-12">
                             <h3 className="name">{resturans.name}</h3>
                             <div className="address">{resturans.address}</div>
                             <div className="city">{resturans.city}, {resturans.area} {resturans.postal_code}</div>
-                            <div className="number">Number: {resturans.phone}</div>
+                            <div className="number">Number: {resturans.phone.replace('x','')}</div>
                             <div className="price">Price: {resturans.price}</div>
                             <a className="btn btn-success" title={"Make reservation for "+resturans.name} href={resturans.reserve_url} target="_blank noopener noreferrer">Reserver now</a>
                             <a className="btn btn-info" title={"Display the"+resturans.name+"on google map"} href={'https://www.google.com/maps/place/' + resturans.lat+','+resturans.lng} target="_blank noopener noreferrer">Google map</a>

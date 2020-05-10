@@ -38,7 +38,7 @@ class Forms extends React.Component {
         const { error, isLoaded, cities } = this.state;
 
         if (!isLoaded) {
-            return <div className="row"><div className="col-lg-4 col-md-4 hidden-xs hidden-sm"></div><div className="col-lg-4 col-sm-12 col-sm-12 col-xs-12"><img src="./pics/loading.gif" alt="loading.." /></div></div>
+            return <div className="row"><div className="col-lg-6 col-md-6 hidden-xs hidden-sm"></div><div className="col-lg-6 col-md-6 col-sm-12 col-xs-12"><img src="./pics/loading.gif" alt="loading.." /></div></div>
         } else if (error) {
             return <div className="row"><div className="col-lg-4 col-md-4 hidden-xs hidden-sm"></div><div className="col-lg-4 col-sm-12 col-sm-12 col-xs-12"><p>Error!</p></div></div>
         } else {
